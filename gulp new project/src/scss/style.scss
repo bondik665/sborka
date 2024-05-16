@@ -1,0 +1,22 @@
+//подключение шрифтов 
+@import "./styles/fonts";
+@import './../font/css/all.css';
+@import "./styles/header.scss";
+@import "./styles/footer.scss";
+@import "./styles/index.scss";
+
+
+
+body{
+      max-width: 1440px;
+   
+    margin: 0 auto;
+    font-family: inter;
+   
+    
+    
+}
+
+
+
+

@@ -1,0 +1,157 @@
+@import "../../../node_modules/slick-carousel/slick/slick.scss";
+
+
+  
+
+//офрмление слайдера 1
+.carousel{
+    padding: 0 50px 30px;
+    margin: 20px;
+    margin: 0 auto;
+    //обращаемся к img
+    &__img{
+    
+     max-height: 400px;
+    margin: 0 auto;
+   object-fit: cover;
+    width: 100%;
+    
+    }
+}
+
+//стрелки слайдера (кнопки )
+.slick-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0;
+    //всесто  содержимого кнопок используем псевдоэлемент before
+        &::before{
+            display: table;
+        //размер стрелок
+        font-size: 60px;
+        line-height: 1;
+        color: #333;
+        }
+//поведение для стрелок при фокусе и наведении
+        &:hover, &:focus {
+            opacity: 0.8;
+        }
+
+}
+//леваая стрелка слайдера
+.slick-prev{
+    left: 0;
+    &::before{
+        content: '\276E';
+    }
+}
+//правая стрелка 
+.slick-next{
+    right: 0;
+    &::before{
+        content: '\276F';
+    }
+}
+
+//пагинация кнопок 
+.slick-dots{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li{
+        display: inline-block;
+        margin: 0 5px;
+    };
+
+    button{
+        padding: 0;
+        border: none;
+        background-color: #b7b3b3;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        font-size: 0;
+        //поведение для стрелок при фокусе и наведении
+        &:hover, &:focus {
+            opacity: 0.8;
+        }
+
+    }
+
+}
+//поменять  цвет активной точки 
+.slick-active{
+    button{
+        background-color: #000;
+    }
+}
+
+.slick-disabled{
+    visibility: hidden;
+    
+}
+// для 3 slider
+.multiple-items3{
+    
+    width: 985px;
+}
+
+
+.multiple-items3 {
+    //леваая стрелка слайдера
+.slick-prev{
+    left: 0;
+    &::before{
+        content: '';
+    }
+}
+//правая стрелка 
+.slick-next{
+    right: 0;
+    &::before{
+        content: '';
+    }
+}
+}
+// для 3 slider конец-----------------------
+
+@media (max-width:600px) {
+    .slick-slider img{
+        width: 100%;
+        min-height: 300px;
+        object-fit: cover;
+        object-position: center;
+      }
+    
+}
+
+//офрмление слайдера 2
+.multiple-items{
+    padding: 0 50px 30px;
+    margin: 10px;
+    width: 100%;
+    margin: 0 auto;
+ 
+}
+   //обращаемся к img
+   .carousel2__img{
+    width: 460px;
+    height: 160px;
+    padding-left: 10px;
+    
+    
+  }
+
+
+ 
